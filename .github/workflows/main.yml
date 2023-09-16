@@ -18,6 +18,13 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
+
+      - name: Group of log lines
+        run: |
+            echo "::group::My title"
+            echo "Inside group"
+            echo "::endgroup::"
+            
       - name: Checkout
         uses: actions/checkout@v2
         with:
